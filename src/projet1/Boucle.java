@@ -1,7 +1,6 @@
 package projet1;
 
 import java.util.*;
-import java.lang.*;
 
 public class Boucle {
 	public static void main (String [] args) {
@@ -32,7 +31,7 @@ public class Boucle {
 		
 		System.out.println("Au revoir " + nom);
 		/**while (a++ < b) {
-			System.out.println("Je t'aime Stéphanie !!!" + a);
+			System.out.println("Tu es un crack !!!" + a);
 			
 		}**/
 	}
