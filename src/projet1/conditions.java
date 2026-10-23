@@ -33,5 +33,8 @@ public class conditions {
 			int min = (n1 > n2) ? n1 * 3 : n2 * 5;
 			int maxi = (n1 < n2) ? ((n2 < 4 ) ? n2 % 2 : n2 + 20)  : n1*5;
 			System.out.println("La valeur minimal est : " + min + " et la valeur maximal est : " + maxi );
+			
+			sc.close();
 		}
+		
 }

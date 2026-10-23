@@ -26,17 +26,16 @@ public class Conversion_CF {
 				                   "------------------------------------------------------------------------------------------ \n"			
 						           + "Choisissez le mode de conversion : \n"+ "\n" + "1 - Conversion du degré Fahrenheit en degré Celsius \n" + 
 						           "2 - Conversion du degré Celsius en degré Fahrenheit \n");
-				choix = sc.nextInt();
-				sc.nextLine();
+				
+				choix =lireInt(sc, "Votre choix : ");
 				
 				while (choix < 1 || choix > 2) {
-					System.out.println("Le mode choisit est invalide. Entrez 1 ou 2 : ");
-					choix = sc.nextInt();
-					sc.nextLine();
+					
+					choix =lireInt(sc, "Le mode choisit est invalide. Entrez 1 ou 2 : ");
+							
 				}
-				System.out.println("Saisissez la température à convertir : \n");
-				n = sc.nextDouble();
-				sc.nextLine();
+				
+				n = liredouble(sc,"Saisissez la température à convertir : \n");
 				
 						switch (choix) {
 						
@@ -66,7 +65,49 @@ public class Conversion_CF {
 				
 		} while (reponse == 'O');
 		
+		
+		
 		System.out.println("Au revoir à bientôt...");
+		
+		sc.close();
 	}
+	
+	static int lireInt (Scanner sc, String message) {
+		
+		System.out.print(message);
+		
+		while (!sc.hasNextInt()) {
+			
+			sc.nextLine();
+			
+			System.out.print("Saisie invalide. \n" + message);
+			
+		}
+		
+		int v = sc.nextInt();
+		
+		sc.nextLine();
+		
+		return v;
+	}
+	
+	static double liredouble (Scanner sc, String message) {
+			
+			System.out.print(message);
+			
+			while (!sc.hasNextDouble()) {
+				
+				sc.nextLine();
+				
+				System.out.print("Saisie invalide. \n" + message);
+				
+			}
+			
+			double v = sc.nextDouble();
+			
+			sc.nextLine();
+			
+			return v;
+		}
 
 }

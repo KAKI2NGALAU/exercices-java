@@ -33,7 +33,7 @@ public class Boucle {
 		/**while (a++ < b) {
 			System.out.println("Tu es un crack !!!" + a);
 			
-		}**/
+		}**/sc.close();
 	}
 	
 }

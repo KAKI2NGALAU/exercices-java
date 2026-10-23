@@ -72,5 +72,7 @@ public class Tableau {
 		} while (reponse == 'O');
 		
 		System.out.println("Au revoir et à la prochaiine :) ");
+		
+		sc.close();
 	}
 }
