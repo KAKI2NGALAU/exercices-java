@@ -1,6 +1,6 @@
-// Toujours dans le cadre de bien maîtriser le premier, voici un exercice sur la gestion des notes
+// Toujours dans le cadre de bien maîtriser le premier chapitre, voici un exercice sur la gestion des notes
 
-//Nous avons un tableau qui récupère le nombre d'étudiants et les notes
+//Nous avons un tableau qui récupère le nombre d'étudiants et les notes de ces derniers
 
 //Ensuite nous avons comme retour la moyenne, le nombre de réussite, le pourcentage de réussite, la note maximale et le note minimale
 
@@ -127,7 +127,7 @@ static int lireInt (Scanner sc, String message) { // Méthode pour les entrées 
 		System.out.println("La note minimale est de : " + noteMin(tabNotes));
 
 		sc.close();
-		do { // Boucle sécondaire 
+		do { // Boucle sécondaire pour recommencer ou non le programme
 			reponse = ' ';
 			System.out.println("Voulez-vous ressayer ? O/N : ");
 			String ligne = sc.nextLine().trim().toUpperCase(); // Empêche le crash si l'utilisateur tape Enter, toUpper ramène le caractère en majuscule
