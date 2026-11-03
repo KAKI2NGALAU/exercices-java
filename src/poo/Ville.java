@@ -3,13 +3,13 @@ package poo;
 
 	public class Ville { // La classe ville qui définit les types
 		
-		private String nomVille ;
+		protected String nomVille ;
 		
-		private String nomPays ;
+		protected String nomPays ;
 		
-		private int nbrHabitants ;
+		protected int nbrHabitants ;
 		
-		private char categorie;
+		protected char categorie;
 
 			public Ville () { // Constructeur par défaut
 				
@@ -26,7 +26,7 @@ package poo;
 			}
 			public Ville (String pNom, int pNbr, String pPays) { // Constructeur avec des paramètres
 				
-				//System.out.println ("Création d'une ville avec des paramètres");
+				System.out.println ("Création d'une ville avec des paramètres");
 				
 				nomVille = pNom;
 				nomPays = pPays;
@@ -110,7 +110,55 @@ package poo;
 				return str;
 				
 			}
+			public String toString () {
+				return "\t" + this.nomVille + " est une ville de " + this.nomPays + ", elle comporte " + this.nbrHabitants
+						+ " d'habitants" + ", elle est de catégorie " + this.categorie;
+			}
 			
-	}		
+	}
+	// Classe Capitale, fille de Ville
+	class Capitale extends Ville {
+		
+		private String monument;
+		// Constructeur par défaut 
+		public Capitale () {
+			
+			super();
+			monument = " aucun";
+		}
+		// Constructeur avec paramètres 
+		public Capitale (String nom, int hab, String pays, String monument) {
+			
+			super (nom, hab, pays);
+			
+			this.monument = monument;
+		}
+		
+		public String getMonument () { // Getter, retourne la valeur du monument, attribut de la Classe fille Capitale
+			
+			return monument;
+		}
+		
+		public void setMonument (String monument) { // Setter, définit la valeur Monument, attribut de la Classe fille Capitale
+			
+			this.monument = monument;
+		}
+		
+		public String decrisToi () { // Description de la Capitale
+			String str = super.decrisToi() + "\n \t ==>>" + this.monument + " en est un monument";
+			System.out.println("Invocation de super.decrisToi()");
+			
+			return str;
+		}
+		
+		public String toString () {
+			String str = super.decrisToi() + "\n \t ==>>" + this.monument + " en est un monument";
+			System.out.println("Invocation de super.decrisToi()");
+			
+			return str;
+		}
+		
+		
+	}
 			
 
